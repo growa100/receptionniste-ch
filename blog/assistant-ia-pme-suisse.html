@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant IA pour PME suisse : comment ça marche vraiment — Receptionniste.ch</title>
+  <meta name="description" content="Comment fonctionne concrètement un assistant IA vocal pour une PME suisse ? Configuration, limites, cas d'usage réels. Sans langue de bois, avec des exemples concrets.">
+  <meta name="keywords" content="assistant IA PME Suisse, réceptionniste IA Suisse romande, IA répondre téléphone PME, assistant vocal entreprise Suisse, IA secrétaire Suisse">
+  <link rel="canonical" href="https://www.receptionniste.ch/blog/assistant-ia-pme-suisse.html">
+  <meta property="og:title" content="Assistant IA pour PME suisse : comment ça marche vraiment">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --green: #1a6b3c; --green-light: #e8f5ee; --ink: #1a1a1a; --muted: #666; --border: #eee; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Sora', sans-serif; color: var(--ink); background: #fff; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { padding: 20px 48px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-size: 18px; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--green); }
+    .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .nav-back:hover { color: var(--green); }
+    .article { max-width: 720px; margin: 0 auto; padding: 80px 24px 100px; }
+    .cat { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 18px; }
+    h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 600; line-height: 1.15; margin-bottom: 20px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    h2 { font-size: 24px; font-weight: 600; margin: 48px 0 18px; }
+    h3 { font-size: 18px; font-weight: 600; margin: 32px 0 14px; }
+    p { margin-bottom: 22px; color: #333; }
+    ul, ol { margin: 0 0 22px 24px; color: #333; }
+    li { margin-bottom: 10px; line-height: 1.65; }
+    strong { color: var(--ink); font-weight: 600; }
+    .callout { background: var(--green-light); border-left: 3px solid var(--green); padding: 24px 28px; margin: 36px 0; border-radius: 0 8px 8px 0; }
+    .callout p { margin: 0; font-size: 16px; }
+    .step-list { margin: 32px 0; }
+    .step { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+    .step:first-child { border-top: 1px solid var(--border); }
+    .step-num { font-size: 13px; font-weight: 600; color: var(--green); min-width: 28px; padding-top: 2px; }
+    .step-content h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .step-content p { font-size: 15px; color: var(--muted); margin: 0; }
+    .example-box { background: #f8f8f8; border-radius: 12px; padding: 28px; margin: 32px 0; font-size: 15px; }
+    .example-box .label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .example-box .speaker { font-weight: 600; color: var(--green); }
+    .example-box .line { margin-bottom: 10px; line-height: 1.6; color: #444; }
+    .cta-box { background: var(--ink); color: #fff; padding: 40px; margin: 56px 0; border-radius: 12px; text-align: center; }
+    .cta-box h3 { color: #fff; margin: 0 0 12px; font-size: 22px; }
+    .cta-box p { color: rgba(255,255,255,0.7); margin-bottom: 24px; font-size: 15px; }
+    .cta-btn { display: inline-block; background: var(--green); color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; }
+    .article-footer { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; }
+    .back-link { font-size: 13px; color: var(--muted); text-decoration: none; }
+    @media (max-width: 768px) { nav { padding: 16px 20px; } .article { padding: 48px 20px 64px; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Receptionniste<span>.ch</span></a>
+  <a href="/blog" class="nav-back">← Blog</a>
+</nav>
+
+<article class="article">
+  <div class="cat">Technologie · PME Suisse</div>
+  <h1>Assistant IA pour PME suisse : comment ça marche vraiment</h1>
+  <div class="meta">Receptionniste.ch · Mai 2026 · 8 min de lecture</div>
+
+  <p>L'intelligence artificielle appliquée à la téléphonie est passée du concept marketing à la réalité opérationnelle en l'espace de deux ans. Aujourd'hui, des PME suisses de 1 à 20 personnes utilisent des assistants IA vocaux pour gérer leurs appels entrants — avec des résultats mesurables. Mais entre les promesses des commerciaux et la réalité du terrain, il y a des nuances importantes à comprendre.</p>
+
+  <h2>Comment fonctionne un assistant IA vocal concrètement</h2>
+
+  <p>Quand un client appelle votre numéro et que vous ne répondez pas, l'appel est transféré à l'assistant IA. Ce qui se passe alors :</p>
+
+  <div class="step-list">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h4>Décrochage et présentation</h4>
+        <p>L'assistant décroche en moins d'une sonnerie et se présente comme votre assistante — avec le nom de votre entreprise. Pas comme une IA, pas comme un service externalisé.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h4>Compréhension de la demande</h4>
+        <p>L'assistant écoute, pose des questions de clarification si nécessaire, et identifie la nature de la demande : devis, urgence, information, rendez-vous, réclamation.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h4>Capture des informations</h4>
+        <p>Nom complet, numéro de rappel, nature précise du besoin, urgence estimée, meilleur moment pour rappeler.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h4>Notification immédiate</h4>
+        <p>En moins de 90 secondes après la fin de l'appel, vous recevez un WhatsApp avec toutes les informations structurées. Pas un email — un message que vous verrez immédiatement.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Ce que ça donne en pratique</h2>
+
+  <div class="example-box">
+    <div class="label">Exemple d'appel — Plombier à Sion</div>
+    <div class="line"><span class="speaker">Ariane :</span> "Bonjour, vous êtes bien chez Dupont Sanitaire, je suis Ariane l'assistante. Que puis-je faire pour vous ?"</div>
+    <div class="line"><span class="speaker">Client :</span> "Bonjour, j'ai une fuite sous mon évier depuis ce matin, ça commence à dégâter le placard."</div>
+    <div class="line"><span class="speaker">Ariane :</span> "Je comprends, c'est urgent. Pouvez-vous me donner votre nom et votre numéro de téléphone pour que M. Dupont vous rappelle rapidement ?"</div>
+    <div class="line"><span class="speaker">Client :</span> "Oui, je suis Michel Bernard, au 079 456 78 90."</div>
+    <div class="line"><span class="speaker">Ariane :</span> "Parfait, je transmets votre demande immédiatement. M. Dupont vous recontactera dans les meilleurs délais. Bonne journée."</div>
+    <div class="line" style="margin-top:16px;padding-top:16px;border-top:1px solid #ddd;"><strong>WhatsApp reçu 80 secondes plus tard :</strong> "🔔 Nouveau client — Michel Bernard, 079 456 78 90. Fuite sous évier, dégâts en cours. URGENT. Rappeler maintenant."</div>
+  </div>
+
+  <h2>Ce que l'IA fait bien — et ce qu'elle ne fait pas</h2>
+
+  <h3>Points forts</h3>
+  <ul>
+    <li>Disponibilité absolue : 24h/24, 365 jours par an, même le 1er août</li>
+    <li>Constance de qualité : jamais fatigué, jamais de mauvaise journée</li>
+    <li>Mémoire parfaite : chaque information captée est retranscrite fidèlement</li>
+    <li>Rapidité de notification : moins de 2 minutes entre la fin de l'appel et votre WhatsApp</li>
+    <li>Scalabilité : gère 10 appels simultanés sans mettre personne en attente</li>
+  </ul>
+
+  <h3>Limites réelles</h3>
+  <ul>
+    <li>Ne peut pas prendre de décisions à votre place (valider un devis, confirmer une disponibilité)</li>
+    <li>Les demandes très complexes ou très émotionnelles sont mieux gérées par un humain</li>
+    <li>Ne peut pas accéder à votre agenda en temps réel sans intégration spécifique</li>
+    <li>Les accents très prononcés ou les connexions mauvaises peuvent affecter la compréhension</li>
+  </ul>
+
+  <div class="callout">
+    <p>L'assistant IA est excellent pour ce que fait mal le répondeur : engager une conversation, capturer les informations et vous notifier immédiatement. Il n'est pas un remplacement pour une relation client complexe — il est un filet de capture des opportunités.</p>
+  </div>
+
+  <h2>La configuration : ce qu'il faut savoir</h2>
+
+  <p>La qualité d'un assistant IA est directement proportionnelle à la qualité de sa configuration. Un assistant générique qui dit "comment puis-je vous aider ?" sans connaître votre métier est peu utile. Un assistant configuré avec vos services spécifiques, vos tarifs, vos horaires et vos questions fréquentes est transformationnel.</p>
+
+  <p>Chez Receptionniste.ch, la configuration initiale prend 48 heures et inclut :</p>
+  <ul>
+    <li>Description précise de vos services et de votre zone géographique</li>
+    <li>Calibrage du ton (formel, familier, technique)</li>
+    <li>Définition des questions de qualification selon votre métier</li>
+    <li>Configuration des alertes urgence vs demande standard</li>
+    <li>Test avec des appels de simulation avant mise en production</li>
+  </ul>
+
+  <h2>ROI mesuré par nos clients en Suisse romande</h2>
+
+  <p>Sur un échantillon de clients actifs depuis plus de 3 mois :</p>
+  <ul>
+    <li><strong>+35% d'appels captés</strong> par rapport à la période avec répondeur seul</li>
+    <li><strong>Délai moyen de rappel réduit de 4h à 12 minutes</strong> grâce à la notification WhatsApp immédiate</li>
+    <li><strong>Taux de conversion des leads captés : 58%</strong> — significativement supérieur aux rappels sur messagerie</li>
+  </ul>
+
+  <p>Ces chiffres varient selon le secteur et la qualité du suivi, mais la tendance est constante : un appel capté avec contexte converti bien mieux qu'un rappel à l'aveugle sur messagerie.</p>
+
+  <div class="cta-box">
+    <h3>Voyez comment Ariane répond pour votre entreprise</h3>
+    <p>Appelez notre numéro de démo — entendez une vraie conversation configurée pour votre secteur.</p>
+    <a href="/" class="cta-btn">Écouter la démo →</a>
+  </div>
+
+  <div class="article-footer">
+    <a href="/blog" class="back-link">← Tous les articles</a>
+    <span style="font-size:13px;color:#aaa;">Receptionniste.ch · Suisse</span>
+  </div>
+</article>
+</body>
+</html>

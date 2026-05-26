@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receptionniste.ch — Ne ratez plus jamais un appel client</title>
+<meta name="description" content="Ariane répond à votre place en français suisse, prend les coordonnées, et vous envoie un résumé WhatsApp en moins de 2 minutes. Pour garages, plombiers, électriciens en Suisse romande. Essai 1 mois CHF 99.">
+<meta name="keywords" content="réceptionniste téléphonique Suisse, assistant IA PME, ne plus rater appels, répondeur intelligent Valais, secrétaire virtuelle Romandie, Ariane assistant vocal">
+<link rel="canonical" href="https://www.receptionniste.ch/">
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.receptionniste.ch/">
+<meta property="og:title" content="Receptionniste.ch — Ne ratez plus jamais un appel client">
+<meta property="og:description" content="Votre assistant répond en français suisse, capte les demandes, et vous envoie un WhatsApp en moins de 2 minutes. Pour garages, plombiers, électriciens.">
+<meta property="og:image" content="https://www.receptionniste.ch/og-image.png">
+<meta property="og:locale" content="fr_CH">
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Receptionniste.ch — Ne ratez plus jamais un appel">
+<meta name="twitter:description" content="Assistant IA vocal pour PME suisses. Répond en français, WhatsApp en 2 min. CHF 99 le premier mois.">
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Receptionniste.ch",
+  "url": "https://www.receptionniste.ch",
+  "description": "Assistant téléphonique IA pour PME suisses. Répond en français suisse, capture les demandes clients et envoie un résumé WhatsApp immédiat.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "99",
+    "priceCurrency": "CHF",
+    "description": "Essai pilote 1 mois"
+  },
+  "provider": {
+    "@type": "Person",
+    "name": "Antoine Pury",
+    "email": "antoine@receptionniste.ch",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Valais",
+      "addressCountry": "CH"
+    }
+  },
+  "areaServed": [
+    {"@type": "State", "name": "Valais"},
+    {"@type": "State", "name": "Vaud"},
+    {"@type": "State", "name": "Genève"},
+    {"@type": "Country", "name": "Suisse"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a; --blue: #16a34a; --blue-light: #dcfce7;
+    --border: #e4e8ed; --text: #0d1b2a; --text-mid: #4a5568; --text-light: #8596a8;
+    --bg: #ffffff; --bg-alt: #f7f8fa; --card-bg: #ffffff; --nav-bg: rgba(255,255,255,0.94);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #e8edf2; --blue: #4ade80; --blue-light: rgba(74,222,128,0.15);
+      --border: #30363d; --text: #e8edf2; --text-mid: #8b949e; --text-light: #6e7681;
+      --bg: #0d1117; --bg-alt: #161b22; --card-bg: #1c2128; --nav-bg: rgba(13,17,23,0.94);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Sora', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+  /* NAV — shared */
+  nav { position:fixed; top:0; width:100%; z-index:100; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 1.25rem; height:60px; display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-family:'Fraunces',serif; font-size:1.3rem; color:var(--navy); text-decoration:none; flex-shrink:0; }
+  .logo span { color:var(--blue); }
+  .nav-links { display:none; align-items:center; gap:0.25rem; position:absolute; left:50%; transform:translateX(-50%); }
+  .nav-link { font-size:0.8rem; color:var(--text-light); text-decoration:none; padding:0.35rem 0.75rem; border-radius:6px; transition:all 0.15s; white-space:nowrap; }
+  .nav-link:hover, .nav-link.active { color:var(--blue); background:var(--blue-light); }
+  .nav-right { display:flex; align-items:center; gap:0.6rem; }
+  .nav-lang { display:flex; gap:0.2rem; }
+  .lang-btn { background:none; border:1px solid var(--border); color:var(--text-light); padding:0.2rem 0.45rem; border-radius:4px; cursor:pointer; font-family:'Sora',sans-serif; font-size:0.65rem; font-weight:500; letter-spacing:0.05em; transition:all 0.15s; }
+  .lang-btn:hover, .lang-btn.active { border-color:var(--blue); color:var(--blue); background:var(--blue-light); }
+  /* Hide lang switcher in nav on mobile, show in footer instead */
+  @media (max-width:679px) { .nav-lang { display:none; } }
+  /* Footer lang switcher */
+  .footer-lang { display:flex; gap:0.35rem; margin-top:0.75rem; }
+  .footer-lang-btn { background:none; border:1px solid var(--border); color:var(--text-light); padding:0.25rem 0.6rem; border-radius:5px; cursor:pointer; font-family:'Sora',sans-serif; font-size:0.72rem; font-weight:500; letter-spacing:0.05em; transition:all 0.15s; }
+  .footer-lang-btn:hover, .footer-lang-btn.active { border-color:var(--blue); color:var(--blue); background:var(--blue-light); }
+  @media (min-width:680px) { .footer-lang { display:none; } }
+  .nav-cta { background:var(--navy); color:white; padding:0.45rem 0.9rem; border-radius:6px; font-size:0.78rem; font-weight:500; text-decoration:none; transition:background 0.15s; white-space:nowrap; }
+  .nav-cta:hover { background:#16a34a; }
+  .nav-hamburger { display:flex; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; margin-right:0.3rem; }
+  .nav-hamburger span { display:block; width:20px; height:2px; background:var(--text); border-radius:2px; transition:all 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity:0; }
+  .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .nav-drawer { position:fixed; top:60px; left:0; right:0; z-index:99; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:1rem 1.25rem 1.25rem; display:flex; flex-direction:column; gap:0.25rem; transform:translateY(-110%); opacity:0; transition:transform 0.25s ease,opacity 0.2s ease; pointer-events:none; }
+  .nav-drawer.open { transform:translateY(0); opacity:1; pointer-events:auto; }
+  .drawer-link { font-size:1rem; color:var(--text); text-decoration:none; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .drawer-link:last-child { border-bottom:none; }
+  .drawer-link:hover, .drawer-link.active { color:var(--blue); }
+  .drawer-link::after { content:'→'; opacity:0.3; font-size:0.85rem; }
+  @media (prefers-color-scheme:dark) { .nav-cta { background:#16a34a; } .nav-cta:hover { background:#15803d; } }
+  @media (min-width:680px) { nav { padding:0 2.5rem; } .nav-links { display:flex; } .nav-hamburger { display:none; } .nav-drawer { display:none !important; } }
+  @media (min-width:1024px) { nav { padding:0 5vw; } }
+
+  .hero { padding: 6.5rem 1.25rem 3rem; display: flex; flex-direction: column; align-items: flex-start; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.45rem; background: var(--blue-light); color: var(--blue); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--blue); border-radius: 50%; animation: blink 1.5s infinite; flex-shrink: 0; }
+  @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
+  h1 { font-family: 'Fraunces', serif; font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; color: var(--navy); margin-bottom: 1.25rem; }
+  h1 em { font-style: italic; color: var(--blue); }
+  .hero-sub { font-size: 1rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 2rem; font-weight: 300; }
+
+  .demo-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; width: 100%; }
+  .demo-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.6rem; }
+  .demo-headline { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--navy); margin-bottom: 1.2rem; line-height: 1.4; }
+  .demo-single-btn { display: flex; align-items: center; gap: 0.9rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; text-decoration: none; transition: all 0.15s; margin-bottom: 1.1rem; }
+  .demo-single-btn:hover { border-color: #16a34a; background: #f0fdf4; }
+  .demo-num-icon { width: 42px; height: 42px; background: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; animation: pulse-green 2s infinite; }
+  @keyframes pulse-green { 0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,0.35)}50%{box-shadow:0 0 0 10px rgba(22,163,74,0)} }
+  .demo-num-icon svg { width: 18px; height: 18px; fill: white; }
+  .demo-num-info { display: flex; flex-direction: column; }
+  .demo-num-sector { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); }
+  .demo-num-number { font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--navy); letter-spacing: -0.01em; }
+  .demo-note { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1.25rem; }
+  .demo-note strong { color: var(--text-mid); }
+  .demo-other-link { font-size: 0.78rem; color: var(--blue); text-decoration: none; display: block; text-align: center; margin-top: 0.5rem; }
+  .demo-other-link:hover { text-decoration: underline; }
+
+  .btn-primary { display: block; width: 100%; text-align: center; background: var(--navy); color: white; border: none; padding: 0.9rem 1.5rem; border-radius: 10px; font-family: 'Sora', sans-serif; font-weight: 500; font-size: 0.9rem; cursor: pointer; transition: all 0.15s; text-decoration: none; margin-bottom: 0.6rem; }
+  .btn-primary:hover { background: #16a34a; }
+  @media (prefers-color-scheme: dark) { .btn-primary { background: #16a34a; } .btn-primary:hover { background: #15803d; } }
+  .btn-secondary { display: block; width: 100%; text-align: center; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); padding: 0.9rem 1.5rem; border-radius: 10px; font-family: 'Sora', sans-serif; font-weight: 400; font-size: 0.9rem; cursor: pointer; transition: all 0.15s; text-decoration: none; }
+  .btn-secondary:hover { border-color: #16a34a; color: #16a34a; }
+
+  .stats-bar { background: #0d1b2a; padding: 2rem 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 1.7rem; color: white; display: block; }
+  .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-top: 0.2rem; display: block; line-height: 1.4; }
+
+  .section { padding: 3.5rem 1.25rem; }
+  .section-alt { background: var(--bg-alt); }
+  .section-dark { background: #0d1b2a !important; }
+  .eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #16a34a; margin-bottom: 0.7rem; }
+  .section-dark .eyebrow { color: rgba(255,255,255,0.4); }
+  .section-title { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 6vw, 2.2rem); line-height: 1.2; color: var(--navy); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
+  .section-dark .section-title { color: white; }
+  .section-sub { color: var(--text-mid); font-size: 0.95rem; line-height: 1.7; font-weight: 300; margin-bottom: 2rem; }
+
+  .pain-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .pain-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; transition: all 0.2s; }
+  .pain-card:hover { border-color: #16a34a; box-shadow: 0 4px 20px rgba(22,163,74,0.08); }
+  .pain-icon { font-size: 1.6rem; margin-bottom: 0.7rem; }
+  .pain-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--navy); }
+  .pain-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
+
+  .steps { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
+  .step { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: flex; gap: 1rem; align-items: flex-start; }
+  .step-num { font-family: 'Fraunces', serif; font-size: 1.8rem; line-height: 1; -webkit-text-stroke: 1.5px #16a34a; color: transparent; flex-shrink: 0; width: 2.5rem; }
+  .step-title { font-weight: 600; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.4rem; }
+  .step-desc { font-size: 0.84rem; color: var(--text-mid); line-height: 1.6; }
+
+  .proof-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
+  .proof-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.4rem; }
+  .proof-stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 0.8rem; letter-spacing: 0.1em; }
+  .proof-text { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; font-style: italic; font-family: 'Fraunces', serif; }
+  .proof-author { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+  .proof-author strong { color: rgba(255,255,255,0.75); display: block; font-family: 'Sora'; font-size: 0.82rem; margin-bottom: 0.1rem; }
+
+  .pricing-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
+  .pricing-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+  .pricing-card.featured { background: #0d1b2a; border-color: #0d1b2a; box-shadow: 0 8px 32px rgba(13,27,42,0.3); }
+  .plan-badge { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.18rem 0.65rem; border-radius: 20px; margin-bottom: 1rem; background: #dcfce7; color: #15803d; }
+  .pricing-card.featured .plan-badge { background: rgba(74,222,128,0.2); color: #4ade80; }
+  .plan-name { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.4rem; }
+  .pricing-card.featured .plan-name { color: rgba(255,255,255,0.45); }
+  .plan-price { font-family: 'Fraunces', serif; font-size: 2.4rem; color: var(--navy); line-height: 1; letter-spacing: -0.02em; }
+  .pricing-card.featured .plan-price { color: white; }
+  .plan-price span { font-size: 0.9rem; font-family: 'Sora'; color: var(--text-light); font-weight: 300; }
+  .pricing-card.featured .plan-price span { color: rgba(255,255,255,0.45); }
+  .plan-note { font-size: 0.75rem; color: var(--text-light); margin: 0.4rem 0 1.2rem; }
+  .pricing-card.featured .plan-note { color: rgba(255,255,255,0.35); }
+  .plan-features { list-style: none; border-top: 1px solid var(--border); padding-top: 1rem; margin-bottom: 1.25rem; }
+  .pricing-card.featured .plan-features { border-color: rgba(255,255,255,0.1); }
+  .plan-features li { font-size: 0.85rem; color: var(--text-mid); padding: 0.4rem 0; display: flex; gap: 0.55rem; line-height: 1.5; }
+  .pricing-card.featured .plan-features li { color: rgba(255,255,255,0.72); }
+  .plan-features li::before { content: '✓'; color: #16a34a; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; margin-top: 0.15rem; }
+  .pricing-card.featured .plan-features li::before { color: #4ade80; }
+  .btn-plan { display: block; width: 100%; text-align: center; padding: 0.85rem; border-radius: 10px; font-family: 'Sora', sans-serif; font-weight: 500; font-size: 0.875rem; text-decoration: none; transition: all 0.15s; border: 1.5px solid var(--border); color: var(--text); background: var(--card-bg); }
+  .btn-plan:hover { border-color: var(--navy); }
+  .btn-plan.featured { background: #16a34a; border-color: #16a34a; color: white; }
+  .btn-plan.featured:hover { background: #15803d; }
+
+  .guarantee { background: var(--blue-light); padding: 1.25rem 1.25rem; border-top: 1px solid rgba(22,163,74,0.2); border-bottom: 1px solid rgba(22,163,74,0.2); text-align: center; }
+  .guarantee p { font-size: 0.85rem; color: var(--text); line-height: 1.5; }
+  .guarantee strong { color: var(--blue); }
+
+  .cta-final { padding: 3.5rem 1.25rem; text-align: center; background: var(--bg); }
+  .cta-final h2 { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 7vw, 2.5rem); color: var(--text); margin-bottom: 0.8rem; letter-spacing: -0.02em; }
+  .cta-final p { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 1.75rem; font-weight: 300; line-height: 1.6; }
+  .btn-whatsapp { display: flex; width: 100%; justify-content: center; align-items: center; gap: 0.5rem; background: #16a34a; color: white; padding: 1rem; border-radius: 12px; font-family: 'Sora', sans-serif; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; margin-bottom: 0.75rem; }
+  .btn-whatsapp:hover { background: #15803d; }
+  .btn-email { display: flex; width: 100%; justify-content: center; align-items: center; gap: 0.5rem; background: var(--card-bg); color: var(--text); border: 1.5px solid var(--border); padding: 1rem; border-radius: 12px; font-family: 'Sora', sans-serif; font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: all 0.15s; }
+  .btn-email:hover { border-color: #16a34a; }
+
+  footer { padding: 1.5rem 1.25rem; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.4rem; background: var(--bg); }
+  .footer-logo { font-family: 'Fraunces', serif; font-size: 0.95rem; color: var(--navy); }
+  .footer-copy { font-size: 0.75rem; color: var(--text-light); }
+  .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.75rem; color: var(--text-light); text-decoration: none; }
+  .footer-links a:hover { color: var(--blue); }
+
+  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (min-width: 768px) {
+    nav { padding: 1rem 5vw; }
+    .hero { padding: 9rem 5vw 5rem; max-width: 1200px; margin: 0 auto; }
+    h1 { font-size: clamp(3rem, 6vw, 5.5rem); }
+    .hero-sub { font-size: 1.1rem; max-width: 52ch; }
+    .demo-box { max-width: 480px; }
+    .btn-primary, .btn-secondary { display: inline-block; width: auto; }
+    .btn-primary { margin-bottom: 0; margin-right: 0.6rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .stats-bar { grid-template-columns: repeat(4, 1fr); padding: 2.5rem 5vw; }
+    .stat-num { font-size: 2rem; }
+    .section { padding: 5.5rem 5vw; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .step { flex-direction: column; align-items: flex-start; }
+    .step-num { width: auto; }
+    .proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: start; }
+    .pricing-card.featured { transform: scale(1.03); }
+    .cta-final { padding: 6rem 5vw; }
+    .btn-whatsapp { display: inline-flex; width: auto; padding: 1rem 2.5rem; margin-bottom: 0; margin-right: 0.75rem; }
+    .btn-email { display: inline-flex; width: auto; padding: 1rem 2rem; }
+    .cta-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; }
+    footer { flex-direction: row; justify-content: space-between; align-items: center; padding: 1.75rem 5vw; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Receptionniste<span>.ch</span></a>
+  <div class="nav-links">
+    <a href="demos.html" class="nav-link">D&#233;mos</a>
+    <a href="comparaison.html" class="nav-link">Comparaison</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-lang">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('it')">IT</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="#contact" class="nav-cta" data-lang='{"fr":"Essai gratuit","de":"Kostenlos testen","it":"Prova gratuita","en":"Free trial"}'>Essai gratuit</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index-v10.html" class="drawer-link active">Accueil</a>
+  <a href="demos.html" class="drawer-link">D&#233;mos secteurs</a>
+  <a href="comparaison.html" class="drawer-link">Comparaison</a>
+  <a href="#contact" class="drawer-link" onclick="toggleMenu()">Essai gratuit</a>
+</div>
+
+<!-- 1. HERO -->
+<div class="section-inner">
+<section class="hero">
+  <div class="hero-badge" data-lang='{"fr":"Assistant IA · Suisse romande · 24h/24","de":"KI-Assistent · Westschweiz · 24/7","it":"Assistente IA · Svizzera · 24h/24","en":"AI Assistant · Swiss Romande · 24/7"}'>Assistant IA · Suisse romande · 24h/24</div>
+  <h1 data-lang='{"fr":"Ne ratez plus jamais un appel client.","de":"Verpassen Sie nie wieder einen Kundenanruf.","it":"Non perdete mai più una chiamata.","en":"Never miss a client call again."}'>Ne ratez plus jamais un <em>appel client.</em></h1>
+  <p class="hero-sub" data-lang='{"fr":"Quand vous êtes en chantier, avec un client, ou fermé — votre assistant répond en français, prend les coordonnées, et vous envoie un résumé WhatsApp immédiatement.","de":"Wenn Sie auf der Baustelle sind — Ihr Assistent antwortet auf Deutsch und sendet Ihnen sofort eine WhatsApp.","it":"Quando siete in cantiere — il vostro assistente risponde in italiano e vi invia subito un WhatsApp.","en":"When you are on-site or closed — your assistant answers in French and sends you a WhatsApp immediately."}'>Quand vous êtes en chantier, avec un client, ou fermé — votre assistant répond en français, prend les coordonnées, et vous envoie un résumé WhatsApp immédiatement.</p>
+  <div class="demo-box fade-up">
+    <div class="demo-label" data-lang='{"fr":"Démo en direct · Appelez maintenant","de":"Live-Demo · Jetzt anrufen","it":"Demo in diretta · Chiama ora","en":"Live demo · Call now"}'>Démo en direct · Appelez maintenant</div>
+    <div class="demo-headline" data-lang='{"fr":"Entendez Ariane répondre pour un garage en Valais","de":"Hören Sie Ariane für eine Garage im Wallis antworten","it":"Ascoltate Ariane rispondere per un garage in Vallese","en":"Hear Ariane answer for a garage in Valais"}'>Entendez Ariane répondre pour un garage en Valais</div>
+    <a href="tel:+41275391784" class="demo-single-btn">
+      <div class="demo-num-icon">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      </div>
+      <div class="demo-num-info">
+        <span class="demo-num-sector" data-lang='{"fr":"Garage · Valais","de":"Garage · Wallis","it":"Garage · Vallese","en":"Garage · Valais"}'>Garage · Valais</span>
+        <span class="demo-num-number">027 539 17 84</span>
+      </div>
+    </a>
+    <p class="demo-note" data-lang='{"fr":"<strong>Parlez-lui comme un vrai client.</strong> Dites que votre voiture fait un bruit, demandez un devis ou posez une question sur les horaires.","de":"<strong>Sprechen Sie wie ein echter Kunde.</strong> Sagen Sie, dass Ihr Auto ein Problem hat, fragen Sie nach einem Angebot.","it":"<strong>Parlategli come un vero cliente.</strong> Dite che la vostra auto ha un problema o chiedete un preventivo.","en":"<strong>Talk to it like a real client.</strong> Say your car has a problem, ask for a quote, or ask about opening hours."}'>
+      <strong>Parlez-lui comme un vrai client.</strong> Dites que votre voiture fait un bruit, demandez un devis ou posez une question sur les horaires.
+    </p>
+    <a href="demos.html" class="demo-other-link" data-lang='{"fr":"Tester pour un électricien ou un sanitaire →","de":"Für Elektriker oder Sanitär testen →","it":"Testare per un elettricista o sanitario →","en":"Test for electrician or plumber →"}'>Tester pour un électricien ou un sanitaire →</a>
+    <div class="cta-row" style="margin-top: 1.25rem;">
+      <a href="#contact" class="btn-primary" data-lang='{"fr":"Démo pour mon entreprise","de":"Demo für mein Unternehmen","it":"Demo per la mia azienda","en":"Demo for my business"}'>Démo pour mon entreprise</a>
+      <a href="#comment" class="btn-secondary" data-lang='{"fr":"Comment ça marche ?","de":"Wie funktioniert es?","it":"Come funziona?","en":"How does it work?"}'>Comment ça marche ?</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- 2. STATS -->
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">80%</span><span class="stat-label" data-lang='{"fr":"ne laissent pas de message","de":"hinterlassen keine Nachricht","it":"non lasciano messaggi","en":"leave no voicemail"}'>ne laissent pas de message</span></div>
+  <div class="stat"><span class="stat-num">CHF 299</span><span class="stat-label" data-lang='{"fr":"/ mois tout inclus","de":"/ Monat alles inklusive","it":"/ mese tutto incluso","en":"/ month all in"}'>/ mois tout inclus</span></div>
+  <div class="stat"><span class="stat-num">24h/24</span><span class="stat-label" data-lang='{"fr":"disponible 7j/7","de":"verfügbar 7/7","it":"disponibile 7gg/7","en":"available 7 days"}'>disponible 7j/7</span></div>
+  <div class="stat"><span class="stat-num">&lt;2 min</span><span class="stat-label" data-lang='{"fr":"résumé WhatsApp","de":"WhatsApp-Zusammenfassung","it":"riepilogo WhatsApp","en":"WhatsApp summary"}'>résumé WhatsApp</span></div>
+</div>
+
+<!-- 3. PROBLÈME -->
+<section class="section section-inner">
+  <div class="eyebrow" data-lang='{"fr":"Le problème","de":"Das Problem","it":"Il problema","en":"The problem"}'>Le problème</div>
+  <h2 class="section-title" data-lang='{"fr":"Chaque appel sans réponse, c'est un client perdu.","de":"Jeder unbeantwortete Anruf ist ein verlorener Kunde.","it":"Ogni chiamata senza risposta è un cliente perso.","en":"Every missed call is a lost client."}'>Chaque appel sans réponse,<br>c'est un client perdu.</h2>
+  <p class="section-sub" id="pain-sub">Vos clients n'attendent pas. Si vous ne décrochez pas, ils appellent le concurrent — immédiatement.</p>
+  <div class="pain-grid">
+    <div class="pain-card fade-up">
+      <div class="pain-icon">🔧</div>
+      <div class="pain-title" data-lang='{"fr":"Vous êtes en intervention","de":"Sie sind im Einsatz","it":"Siete in intervento","en":"You are on-site"}'>Vous êtes en intervention</div>
+      <p class="pain-desc" data-lang='{"fr":"Les mains dans le moteur, sous l'évier, sur le toit — impossible de répondre. Ce client ne rappellera pas.","de":"Die Hände im Motor — unmöglich zu antworten. Dieser Kunde ruft nicht zurück.","it":"Le mani nel motore — impossibile rispondere. Quel cliente non richiamerà.","en":"Hands in the engine, under the sink — impossible to answer. That client will not call back."}'>Les mains dans le moteur, sous l'évier, sur le toit — impossible de répondre. Ce client ne rappellera pas.</p>
+    </div>
+    <div class="pain-card fade-up">
+      <div class="pain-icon">🌙</div>
+      <div class="pain-title" data-lang='{"fr":"Après les heures","de":"Nach den Bürostunden","it":"Fuori orario","en":"After hours"}'>Après les heures</div>
+      <p class="pain-desc" data-lang='{"fr":"Un client cherche un plombier à 20h pour une fuite. Votre répondeur ne suffit pas — il veut parler à quelqu'un maintenant.","de":"Ein Kunde sucht um 20 Uhr einen Klempner. Ihr Anrufbeantworter reicht nicht.","it":"Un cliente cerca un idraulico alle 20h. La segreteria non basta.","en":"A client looks for a plumber at 8pm. Your voicemail is not enough — they want to talk now."}'>Un client cherche un plombier à 20h pour une fuite. Votre répondeur ne suffit pas — il veut parler à quelqu'un maintenant.</p>
+    </div>
+    <div class="pain-card fade-up">
+      <div class="pain-icon">💸</div>
+      <div class="pain-title" data-lang='{"fr":"Le coût réel d'un appel manqué","de":"Die wahren Kosten eines verpassten Anrufs","it":"Il costo reale di una chiamata persa","en":"The real cost of a missed call"}'>Le coût réel d'un appel manqué</div>
+      <p class="pain-desc" data-lang='{"fr":"CHF 200–800 par intervention. 2 appels ratés par semaine = CHF 1\'600/mois perdus. L'assistant coûte CHF 299.","de":"CHF 200–800 pro Einsatz. 2 verpasste Anrufe/Woche = CHF 1\'600/Monat verloren.","it":"CHF 200–800 per intervento. 2 chiamate perse/settimana = CHF 1\'600/mese.","en":"CHF 200–800 per job. 2 missed calls per week = CHF 1\'600/month lost. The assistant costs CHF 299."}'>CHF 200–800 par intervention. 2 appels ratés par semaine = CHF 1'600/mois perdus. L'assistant coûte CHF 299.</p>
+    </div>
+    <div class="pain-card fade-up">
+      <div class="pain-icon">😤</div>
+      <div class="pain-title" data-lang='{"fr":"Une secrétaire = CHF 4000+/mois","de":"Eine Sekretärin = CHF 4000+/Monat","it":"Una segretaria = CHF 4000+/mese","en":"A secretary = CHF 4000+/month"}'>Une secrétaire = CHF 4000+/mois</div>
+      <p class="pain-desc" data-lang='{"fr":"Et elle est en vacances ou malade. L'assistant répond 24h/24 pour CHF 299/mois.","de":"Und sie ist im Urlaub oder krank. Der Assistent antwortet 24/7 für CHF 299/Monat.","it":"E va in vacanza o si ammala. L'assistente risponde 24h/24 per CHF 299/mese.","en":"And she is on holiday or sick. The assistant answers 24/7 for CHF 299/month."}'>Et elle est en vacances ou malade. L'assistant répond 24h/24 pour CHF 299/mois.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. MYTHE DU RÉPONDEUR -->
+<section class="section" style="background: var(--bg-alt);">
+  <div class="section-inner">
+    <div class="eyebrow" style="color: #dc2626;">Le mythe du répondeur</div>
+    <h2 class="section-title">&#171;&#160;J&#8217;ai d&#233;j&#224; un r&#233;pondeur,<br>&#231;a me va.&#160;&#187;</h2>
+    <p class="section-sub">C&#8217;est la r&#233;ponse la plus fr&#233;quente. Et la plus co&#251;teuse. Voici ce que disent les donn&#233;es.</p>
+    <div class="pain-grid" style="margin-bottom: 1.5rem;">
+      <div class="pain-card" style="border-left: 3px solid #dc2626; border-radius: 0 14px 14px 0;">
+        <div style="font-family: 'Fraunces', serif; font-size: 2.8rem; color: #dc2626; line-height: 1; margin-bottom: 0.4rem;">80%</div>
+        <div class="pain-title">raccrochent sans laisser de message</div>
+        <p class="pain-desc">Ils pensent que personne ne les &#233;coutera. Ils appellent le suivant.</p>
+        <p style="font-size: 0.72rem; color: var(--text-light); margin-top: 0.75rem;">Source&#160;: Forbes Magazine &#183; BIA/Kelsey Research</p>
+      </div>
+      <div class="pain-card" style="border-left: 3px solid #dc2626; border-radius: 0 14px 14px 0;">
+        <div style="font-family: 'Fraunces', serif; font-size: 2.8rem; color: #dc2626; line-height: 1; margin-bottom: 0.4rem;">34%</div>
+        <div class="pain-title">appellent un concurrent imm&#233;diatement</div>
+        <p class="pain-desc">Pas dans une heure. Dans les 60&#160;secondes qui suivent votre r&#233;pondeur.</p>
+        <p style="font-size: 0.72rem; color: var(--text-light); margin-top: 0.75rem;">Source&#160;: NewVoiceMedia</p>
+      </div>
+    </div>
+    <div class="pain-card" style="border: 1.5px solid #dc2626;">
+      <div class="eyebrow" style="color: #dc2626;">Calcul &#183; Garage ind&#233;pendant, Valais</div>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);"><span style="color: var(--text-mid);">Appels manqu&#233;s / semaine</span><span style="font-weight: 600;">5</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);"><span style="color: var(--text-mid);">Qui laissent un message (20&#160;%)</span><span style="font-weight: 600;">1 sur 5</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);"><span style="color: var(--text-mid);">Perdus sans trace / semaine</span><span style="font-weight: 600; color: #dc2626;">4 clients</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);"><span style="color: var(--text-mid);">Valeur moyenne / intervention</span><span style="font-weight: 600;">CHF 400</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 1rem; padding-top: 0.25rem;"><span style="font-weight: 600; color: var(--navy);">Manque &#224; gagner / mois</span><span style="font-family: 'Fraunces', serif; font-size: 1.4rem; color: #dc2626; font-weight: 700;">CHF 6&#8217;400</span></div>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 1rem; line-height: 1.5;">4 clients perdus &#215; 4 semaines &#215; CHF 400. Ariane co&#251;te CHF&#160;99 le premier mois.</p>
+    </div>
+    <p style="font-size: 0.95rem; text-align: center; color: var(--text-mid); margin-top: 1.5rem; line-height: 1.6;">Votre r&#233;pondeur ne rate pas d&#8217;appels. <strong style="color: var(--navy);">Il les cache.</strong></p>
+  </div>
+</section>
+
+<!-- 5. COMMENT ÇA MARCHE -->
+<section class="section section-inner" id="comment">
+  <div class="eyebrow" data-lang='{"fr":"Comment ça marche","de":"Wie es funktioniert","it":"Come funziona","en":"How it works"}'>Comment ça marche</div>
+  <h2 class="section-title" data-lang='{"fr":"Trois étapes. Rien à changer.","de":"Drei Schritte. Nichts ändern.","it":"Tre passi. Niente da cambiare.","en":"Three steps. Nothing to change."}'>Trois &#233;tapes.<br>Rien &#224; changer.</h2>
+  <p class="section-sub" data-lang='{"fr":"Vous gardez votre numéro actuel. Les appels sont transférés à l'assistant quand vous ne répondez pas.","de":"Sie behalten Ihre aktuelle Nummer. Anrufe werden weitergeleitet, wenn Sie nicht antworten.","it":"Mantenete il vostro numero attuale. Le chiamate vengono trasferite quando non rispondete.","en":"You keep your current number. Calls are forwarded to the assistant when you do not answer."}'>Vous gardez votre num&#233;ro actuel. Les appels sont transf&#233;r&#233;s &#224; l&#8217;assistant quand vous ne r&#233;pondez pas.</p>
+  <div class="steps">
+    <div class="step fade-up">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <div class="step-title" data-lang='{"fr":"Votre client appelle","de":"Ihr Kunde ruft an","it":"Il vostro cliente chiama","en":"Your client calls"}'>Votre client appelle</div>
+        <p class="step-desc" data-lang='{"fr":"Ariane décroche en votre nom, en français suisse. Elle se présente comme votre assistante — pas comme une IA.","de":"Ariane nimmt in Ihrem Namen auf Deutsch ab.","it":"Ariane risponde, a vostro nome, in italiano.","en":"Ariane picks up in your name, in French. Not as an AI — as your assistant."}'>Ariane d&#233;croche en votre nom, en fran&#231;ais suisse. Elle se pr&#233;sente comme votre assistante — pas comme une IA.</p>
+      </div>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <div class="step-title" data-lang='{"fr":"Elle capte la demande","de":"Sie erfasst die Anfrage","it":"Raccoglie la richiesta","en":"She captures the request"}'>Elle capte la demande</div>
+        <p class="step-desc" data-lang='{"fr":"Elle écoute, pose les bonnes questions, et note : nom, numéro, nature du besoin, urgence.","de":"Sie hört zu, stellt Fragen und notiert: Name, Nummer, Art des Bedarfs, Dringlichkeit.","it":"Ascolta, fa domande e annota: nome, numero, natura del bisogno, urgenza.","en":"She listens, asks the right questions, and notes: name, number, nature of the need, urgency."}'>Elle &#233;coute, pose les bonnes questions, et note&#160;: nom, num&#233;ro, nature du besoin, urgence.</p>
+      </div>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <div class="step-title" data-lang='{"fr":"Vous recevez le lead","de":"Sie erhalten den Lead","it":"Ricevete il lead","en":"You receive the lead"}'>Vous recevez le lead</div>
+        <p class="step-desc" data-lang='{"fr":"En moins de 2 minutes, un WhatsApp avec toutes les infos. Vous rappelez quand vous êtes libre.","de":"In weniger als 2 Minuten ein WhatsApp. Sie rufen zurück, wenn Sie frei sind.","it":"In meno di 2 minuti un WhatsApp. Richiamate quando siete liberi.","en":"In less than 2 minutes, a WhatsApp with all the details. You call back when free."}'>En moins de 2 minutes, un WhatsApp avec toutes les infos. Vous rappelez quand vous &#234;tes libre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PROOF -->
+<section class="section section-dark">
+  <div class="section-inner">
+    <div class="eyebrow" data-lang='{"fr":"Premiers retours","de":"Erste Rückmeldungen","it":"Prime risposte","en":"First feedback"}'>Premiers retours</div>
+    <h2 class="section-title" data-lang='{"fr":"Ils ne ratent plus jamais un appel.","de":"Sie verpassen nie mehr einen Anruf.","it":"Non perdono mai più una chiamata.","en":"They never miss a call anymore."}'>Ils ne ratent plus<br>jamais un appel.</h2>
+    <div class="proof-grid">
+      <div class="proof-card fade-up">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-text">"Avant je ratais 3-4 appels par jour quand j&#8217;&#233;tais sous une voiture. Maintenant j&#8217;ai tout sur WhatsApp. 2 nouveaux clients la premi&#232;re semaine."</p>
+        <div class="proof-author"><strong data-lang='{"fr":"Garage pilote, Valais","de":"Pilotgarage, Wallis","it":"Garage pilota, Vallese","en":"Pilot garage, Valais"}'>Garage pilote, Valais</strong><span>2026</span></div>
+      </div>
+      <div class="proof-card fade-up">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-text">"J&#8217;&#233;tais sceptique. Mais quand j&#8217;ai entendu l&#8217;assistant r&#233;pondre en fran&#231;ais et prendre les coordonn&#233;es, j&#8217;ai compris. C&#8217;est exactement ce qu&#8217;il me fallait."</p>
+        <div class="proof-author"><strong data-lang='{"fr":"Plombier indépendant, Sion","de":"Klempner, Sitten","it":"Idraulico, Sion","en":"Independent plumber, Sion"}'>Plombier ind&#233;pendant, Sion</strong><span>2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. TARIFS -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="eyebrow" data-lang='{"fr":"Tarifs","de":"Preise","it":"Prezzi","en":"Pricing"}'>Tarifs</div>
+    <h2 class="section-title" data-lang='{"fr":"Simple et transparent.","de":"Einfach und transparent.","it":"Semplice e trasparente.","en":"Simple and transparent."}'>Simple et transparent.</h2>
+    <p class="section-sub" data-lang='{"fr":"Commencez par un mois pilote sans risque. Continuez si ça marche — sans surprise.","de":"Beginnen Sie mit einem risikofreien Pilotmonat.","it":"Iniziate con un mese pilota senza rischi.","en":"Start with a risk-free pilot month. Continue if it works."}'>Commencez par un mois pilote sans risque. Continuez si &#231;a marche — sans surprise.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card fade-up">
+        <div class="plan-badge" data-lang='{"fr":"Sans engagement","de":"Ohne Verpflichtung","it":"Senza impegno","en":"No commitment"}'>Sans engagement</div>
+        <div class="plan-name">PILOTE</div>
+        <div class="plan-price">CHF 99 <span data-lang='{"fr":"/ 1 mois","de":"/ 1 Monat","it":"/ 1 mese","en":"/ 1 month"}'>/ 1 mois</span></div>
+        <div class="plan-note">Tout inclus &#183; Aucun frais cach&#233;</div>
+        <ul class="plan-features">
+          <li>Assistant configur&#233; pour votre entreprise</li>
+          <li>Num&#233;ro suisse d&#233;di&#233;</li>
+          <li>R&#233;sum&#233;s WhatsApp en temps r&#233;el</li>
+          <li>Rapport des leads captur&#233;s</li>
+        </ul>
+        <a href="#contact" class="btn-plan" data-lang='{"fr":"Démarrer le pilote","de":"Pilot starten","it":"Avviare il pilota","en":"Start the pilot"}'>D&#233;marrer le pilote</a>
+      </div>
+      <div class="pricing-card featured fade-up">
+        <div class="plan-badge" data-lang='{"fr":"Le plus populaire","de":"Am beliebtesten","it":"Il più popolare","en":"Most popular"}'>Le plus populaire</div>
+        <div class="plan-name">STANDARD</div>
+        <div class="plan-price">CHF 299 <span data-lang='{"fr":"/ mois","de":"/ Monat","it":"/ mese","en":"/ month"}'>/ mois</span></div>
+        <div class="plan-note" style="color:rgba(255,255,255,0.35);">Tout inclus &#183; Pas de frais d&#8217;installation &#183; Sans engagement</div>
+        <ul class="plan-features">
+          <li>Tout du pilote, en continu</li>
+          <li>Disponible 24h/24, 7j/7</li>
+          <li>Agenda Google Calendar int&#233;gr&#233;</li>
+          <li>Rapport mensuel d&#8217;opportunit&#233;s</li>
+          <li>Support direct Antoine, Valais</li>
+        </ul>
+        <a href="#contact" class="btn-plan featured" data-lang='{"fr":"Commencer maintenant","de":"Jetzt beginnen","it":"Inizia ora","en":"Get started now"}'>Commencer maintenant</a>
+      </div>
+      <div class="pricing-card fade-up">
+        <div class="plan-badge">Fonctionnalit&#233;s avanc&#233;es</div>
+        <div class="plan-name">PREMIUM</div>
+        <div class="plan-price">CHF 499 <span data-lang='{"fr":"/ mois","de":"/ Monat","it":"/ mese","en":"/ month"}'>/ mois</span></div>
+        <div class="plan-note">Installation CHF 500 &#183; Sans engagement</div>
+        <ul class="plan-features">
+          <li>Tout du standard</li>
+          <li>Transfert urgences en direct</li>
+          <li>Dashboard leads + statistiques</li>
+          <li>Int&#233;gration CRM sur mesure</li>
+        </ul>
+        <a href="#contact" class="btn-plan" data-lang='{"fr":"En savoir plus","de":"Mehr erfahren","it":"Saperne di più","en":"Learn more"}'>En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. GARANTIE + CTA -->
+<div class="guarantee">
+  <p id="guarantee-text">🛡️ <strong>Garantie pilote</strong> — Pas convaincu apr&#232;s 1 mois&#160;? Vous ne payez pas la suite. Simple.</p>
+</div>
+
+<section class="cta-final" id="contact">
+  <h2 data-lang='{"fr":"Prêt à ne plus rater d'appels ?","de":"Bereit, keine Anrufe mehr zu verpassen?","it":"Pronti a non perdere più chiamate?","en":"Ready to never miss a call again?"}'>Pr&#234;t &#224; ne plus<br>rater d&#8217;appels&#160;?</h2>
+  <p data-lang='{"fr":"Votre assistant est prêt en moins de 48h. Contactez-nous pour démarrer.","de":"Ihr Assistent ist in weniger als 48h bereit.","it":"Il vostro assistente è pronto in meno di 48 ore.","en":"Your assistant is ready in less than 48h. Contact us to get started."}'>Votre assistant est pr&#234;t en moins de 48h. Contactez-nous pour d&#233;marrer.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/41789151573?text=Bonjour%20Antoine%2C%20je%20souhaite%20une%20d%C3%A9mo%20pour%20mon%20entreprise." class="btn-whatsapp" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-lang='{"fr":"Nous contacter","de":"Kontakt aufnehmen","it":"Contattateci","en":"Contact us"}'>Nous contacter</span>
+    </a>
+    <a href="mailto:antoine@receptionniste.ch" class="btn-email">✉️ antoine@receptionniste.ch</a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="/" class="footer-logo">Receptionniste.ch</a>
+    <div class="footer-links" style="margin-top: 0.5rem;">
+      <a href="demos.html" data-lang='{"fr":"D&#233;mos secteurs","de":"Sektordemos","it":"Demo settori","en":"Sector demos"}'>D&#233;mos secteurs</a>
+      <a href="comparaison.html" data-lang='{"fr":"Comparaison","de":"Vergleich","it":"Confronto","en":"Comparison"}'>Comparaison</a>
+    </div>
+    <div class="footer-lang">
+      <span style="font-size:0.72rem;color:var(--text-light);line-height:2;">Langue&#160;:</span>
+      <button class="footer-lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="footer-lang-btn" onclick="setLang('de')">DE</button>
+      <button class="footer-lang-btn" onclick="setLang('it')">IT</button>
+      <button class="footer-lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <div class="footer-copy" data-lang='{"fr":"&#169; 2026 &#183; Valais, Suisse &#183; Antoine Pury","de":"&#169; 2026 &#183; Wallis, Schweiz &#183; Antoine Pury","it":"&#169; 2026 &#183; Vallese, Svizzera &#183; Antoine Pury","en":"&#169; 2026 &#183; Valais, Switzerland &#183; Antoine Pury"}'>&#169; 2026 &#183; Valais, Suisse &#183; Antoine Pury</div>
+</footer>
+
+<script>
+  const painSubTexts = { fr:'Vos clients n\u2019attendent pas. Si vous ne décrochez pas, ils appellent le concurrent\u00a0— immédiatement.', de:'Ihre Kunden warten nicht. Wenn Sie nicht abheben, rufen sie sofort die Konkurrenz an.', it:'I vostri clienti non aspettano. Chiamano subito la concorrenza.', en:'Your clients do not wait. If you do not pick up, they call your competitor — immediately.' };
+  const guaranteeTexts = { fr:'🛡️ <strong>Garantie pilote</strong> — Pas convaincu après 1 mois\u00a0? Vous ne payez pas la suite. Simple.', de:'🛡️ <strong>Pilot-Garantie</strong> — Nicht überzeugt nach 1 Monat? Sie zahlen nicht weiter.', it:'🛡️ <strong>Garanzia pilota</strong> — Non convinti dopo 1 mese? Non pagate il seguito.', en:'🛡️ <strong>Pilot guarantee</strong> — Not convinced after 1 month? You do not pay. Simple.' };
+
+  function setLang(lang, save=true) {
+    if (save) localStorage.setItem('rc_lang', lang);
+    document.querySelectorAll('.lang-btn, .footer-lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+    document.querySelectorAll('[data-lang]').forEach(el => { try { const t = JSON.parse(el.getAttribute('data-lang')); if (t[lang]) el.innerHTML = t[lang]; } catch(e) {} });
+    const g = document.getElementById('guarantee-text'); if (g && guaranteeTexts[lang]) g.innerHTML = guaranteeTexts[lang];
+    const ps = document.getElementById('pain-sub'); if (ps && painSubTexts[lang]) ps.innerHTML = painSubTexts[lang];
+  }
+
+  // Auto-detect language on load
+  (function() {
+    const saved = localStorage.getItem('rc_lang');
+    if (saved) { setLang(saved, false); return; }
+    const sys = (navigator.language || navigator.userLanguage || 'fr').toLowerCase().split('-')[0];
+    const supported = ['fr', 'de', 'it', 'en'];
+    setLang(supported.includes(sys) ? sys : 'fr', false);
+  })();
+
+  const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i*80); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  function toggleMenu() {
+    const h = document.getElementById('hamburger');
+    const d = document.getElementById('drawer');
+    h.classList.toggle('open');
+    d.classList.toggle('open');
+  }
+  document.addEventListener('click', e => {
+    const d = document.getElementById('drawer');
+    const h = document.getElementById('hamburger');
+    if (d && d.classList.contains('open') && !d.contains(e.target) && !h.contains(e.target)) {
+      d.classList.remove('open'); h.classList.remove('open');
+    }
+  });
+  window.addEventListener('scroll', () => { document.querySelector('nav').style.boxShadow = window.scrollY > 10 ? '0 1px 16px rgba(0,0,0,0.07)' : 'none'; });
+</script>
+</body>
+</html>

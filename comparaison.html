@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparaison — Ariane vs Répondeur, Secrétaire, Piquet | Receptionniste.ch</title>
+<meta name="description" content="Comparaison complète : Receptionniste.ch vs répondeur automatique, secrétaire, téléphone de piquet. Coûts, fonctionnalités, disponibilité pour PME suisses.">
+<link rel="canonical" href="https://www.receptionniste.ch/comparaison.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.receptionniste.ch/comparaison.html">
+<meta property="og:title" content="Ariane vs Répondeur vs Secrétaire — Comparaison honnête">
+<meta property="og:description" content="Tableau comparatif complet pour PME suisses. Coûts, disponibilité, fonctionnalités — quel est le meilleur choix pour ne plus rater d'appels ?">
+<meta property="og:locale" content="fr_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0d1b2a; --blue:#16a34a; --blue-light:#dcfce7; --border:#e4e8ed; --text:#0d1b2a; --text-mid:#4a5568; --text-light:#8596a8; --bg:#ffffff; --bg-alt:#f7f8fa; --card-bg:#ffffff; --nav-bg:rgba(255,255,255,0.94); }
+  @media (prefers-color-scheme: dark) { :root { --navy:#e8edf2; --blue:#4ade80; --blue-light:rgba(74,222,128,0.15); --border:#30363d; --text:#e8edf2; --text-mid:#8b949e; --text-light:#6e7681; --bg:#0d1117; --bg-alt:#161b22; --card-bg:#1c2128; --nav-bg:rgba(13,17,23,0.94); } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Sora',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+  /* NAV — shared */
+  nav { position:fixed; top:0; width:100%; z-index:100; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 1.25rem; height:60px; display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-family:'Fraunces',serif; font-size:1.3rem; color:var(--navy); text-decoration:none; flex-shrink:0; }
+  .logo span { color:var(--blue); }
+  .nav-links { display:none; align-items:center; gap:0.25rem; position:absolute; left:50%; transform:translateX(-50%); }
+  .nav-link { font-size:0.8rem; color:var(--text-light); text-decoration:none; padding:0.35rem 0.75rem; border-radius:6px; transition:all 0.15s; white-space:nowrap; }
+  .nav-link:hover, .nav-link.active { color:var(--blue); background:var(--blue-light); }
+  .nav-right { display:flex; align-items:center; gap:0.6rem; }
+  .nav-cta { background:var(--navy); color:white; padding:0.45rem 0.9rem; border-radius:6px; font-size:0.78rem; font-weight:500; text-decoration:none; transition:background 0.15s; white-space:nowrap; }
+  .nav-cta:hover { background:#16a34a; }
+  .nav-hamburger { display:flex; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; margin-right:0.3rem; }
+  .nav-hamburger span { display:block; width:20px; height:2px; background:var(--text); border-radius:2px; transition:all 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity:0; }
+  .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .nav-drawer { position:fixed; top:60px; left:0; right:0; z-index:99; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:1rem 1.25rem 1.25rem; display:flex; flex-direction:column; gap:0.25rem; transform:translateY(-110%); opacity:0; transition:transform 0.25s ease,opacity 0.2s ease; pointer-events:none; }
+  .nav-drawer.open { transform:translateY(0); opacity:1; pointer-events:auto; }
+  .drawer-link { font-size:1rem; color:var(--text); text-decoration:none; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .drawer-link:last-child { border-bottom:none; }
+  .drawer-link:hover, .drawer-link.active { color:var(--blue); }
+  .drawer-link::after { content:'→'; opacity:0.3; font-size:0.85rem; }
+  .footer-lang { display:flex; gap:0.35rem; margin-top:0.75rem; }
+  .footer-lang-btn { background:none; border:1px solid var(--border); color:var(--text-light); padding:0.25rem 0.6rem; border-radius:5px; cursor:pointer; font-family:'Sora',sans-serif; font-size:0.72rem; font-weight:500; transition:all 0.15s; }
+  .footer-lang-btn:hover, .footer-lang-btn.active { border-color:var(--blue); color:var(--blue); background:var(--blue-light); }
+  @media (prefers-color-scheme:dark) { .nav-cta { background:#16a34a; } .nav-cta:hover { background:#15803d; } }
+  @media (min-width:680px) { nav { padding:0 2.5rem; } .nav-links { display:flex; } .nav-hamburger { display:none; } .nav-drawer { display:none !important; } .footer-lang { display:none; } }
+  @media (min-width:1024px) { nav { padding:0 5vw; } }
+
+  .page-header { padding:6.5rem 1.25rem 2.5rem; text-align:center; background:var(--bg-alt); }
+  .eyebrow { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#16a34a; margin-bottom:0.7rem; }
+  h1 { font-family:'Fraunces',serif; font-size:clamp(1.8rem,6vw,2.8rem); font-weight:700; line-height:1.1; letter-spacing:-0.02em; color:var(--navy); margin-bottom:1rem; }
+  .page-sub { font-size:1rem; color:var(--text-mid); line-height:1.7; font-weight:300; max-width:52ch; margin:0 auto; }
+
+  .content { max-width:900px; margin:0 auto; padding:3rem 1.25rem; }
+
+  .section-title { font-family:'Fraunces',serif; font-size:clamp(1.4rem,4vw,1.8rem); color:var(--navy); margin-bottom:0.6rem; letter-spacing:-0.01em; }
+  .section-sub { color:var(--text-mid); font-size:0.9rem; line-height:1.7; margin-bottom:1.5rem; }
+
+  /* BIG TABLE */
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:3rem; }
+  .comp-table { width:100%; border-collapse:collapse; font-size:14px; min-width:520px; }
+  .comp-table th { padding:12px 10px; font-size:12px; font-weight:600; border-bottom:1px solid var(--border); color:var(--text-light); text-align:center; }
+  .comp-table th:first-child { text-align:left; width:32%; }
+  .comp-table th.col-win { color:#15803d; border-bottom:2px solid #16a34a; background:#f0fdf4; }
+  .comp-table td { padding:13px 10px; border-bottom:1px solid var(--border); text-align:center; font-size:14px; color:var(--text-mid); vertical-align:middle; }
+  .comp-table td:first-child { text-align:left; color:var(--text); font-size:13px; }
+  .comp-table td.col-win { background:#f0fdf4; border-bottom:1px solid #dcfce7; }
+  .comp-table tr:last-child td { border-bottom:none; }
+  .comp-table tbody tr:hover td { background:var(--bg-alt); }
+  .comp-table tbody tr:hover td.col-win { background:#e8fdf0; }
+  .w-badge { display:inline-block; background:#dcfce7; color:#15803d; font-size:10px; font-weight:600; padding:2px 8px; border-radius:20px; margin-bottom:4px; white-space:nowrap; }
+  .ck { color:#16a34a; font-size:17px; font-weight:700; }
+  .cx { color:#dc2626; font-size:17px; }
+  .cp { color:#d97706; font-size:15px; }
+  .table-note { font-size:11px; color:var(--text-light); text-align:center; margin-top:0.5rem; margin-bottom:2.5rem; }
+
+  /* DETAIL CARDS */
+  .detail-grid { display:flex; flex-direction:column; gap:1.25rem; margin-bottom:3rem; }
+  .detail-card { background:var(--card-bg); border:1px solid var(--border); border-radius:16px; padding:1.5rem; }
+  .detail-card.featured { border-color:#16a34a; background:#f0fdf4; }
+  .detail-header { display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem; }
+  .detail-icon { font-size:1.5rem; }
+  .detail-name { font-family:'Fraunces',serif; font-size:1.2rem; color:var(--navy); font-weight:700; }
+  .detail-price { font-size:0.8rem; color:var(--text-light); margin-top:0.1rem; }
+  .detail-card.featured .detail-name { color:#15803d; }
+  .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  .pros h4, .cons h4 { font-size:0.72rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.6rem; }
+  .pros h4 { color:#15803d; }
+  .cons h4 { color:#dc2626; }
+  .pros li, .cons li { font-size:0.84rem; color:var(--text-mid); padding:0.3rem 0; display:flex; gap:0.5rem; line-height:1.4; list-style:none; }
+  .pros li::before { content:'✓'; color:#16a34a; font-size:0.75rem; font-weight:700; flex-shrink:0; margin-top:0.1rem; }
+  .cons li::before { content:'✗'; color:#dc2626; font-size:0.75rem; font-weight:700; flex-shrink:0; margin-top:0.1rem; }
+  .detail-verdict { font-size:0.84rem; color:var(--text-mid); border-top:1px solid var(--border); padding-top:0.9rem; margin-top:0.9rem; line-height:1.6; }
+  .detail-card.featured .detail-verdict { border-color:rgba(22,163,74,0.3); }
+
+  /* FAQ */
+  .faq { margin-bottom:3rem; }
+  .faq-item { border-bottom:1px solid var(--border); padding:1.25rem 0; }
+  .faq-item:last-child { border-bottom:none; }
+  .faq-q { font-weight:600; font-size:0.95rem; color:var(--navy); margin-bottom:0.5rem; }
+  .faq-a { font-size:0.88rem; color:var(--text-mid); line-height:1.7; }
+
+  /* BOTTOM CTA */
+  .bottom-cta { background:#0d1b2a; padding:3rem 1.25rem; text-align:center; border-radius:20px; margin-bottom:3rem; }
+  .bottom-cta h2 { font-family:'Fraunces',serif; font-size:clamp(1.4rem,4vw,1.9rem); color:white; margin-bottom:0.75rem; }
+  .bottom-cta p { color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:1.5rem; line-height:1.6; }
+  .btn-wa { display:inline-flex; align-items:center; gap:0.5rem; background:#16a34a; color:white; padding:0.9rem 2rem; border-radius:12px; font-family:'Sora',sans-serif; font-weight:500; font-size:0.95rem; text-decoration:none; transition:background 0.15s; }
+  .btn-wa:hover { background:#15803d; }
+  .btn-demo { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.1); color:white; padding:0.9rem 2rem; border-radius:12px; font-family:'Sora',sans-serif; font-weight:500; font-size:0.95rem; text-decoration:none; transition:background 0.15s; margin-left:0.75rem; }
+  .btn-demo:hover { background:rgba(255,255,255,0.2); }
+
+  footer { padding:1.5rem 1.25rem; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:0.4rem; background:var(--bg); }
+  .footer-logo { font-family:'Fraunces',serif; font-size:0.95rem; color:var(--navy); }
+  .footer-copy { font-size:0.75rem; color:var(--text-light); }
+  .footer-links { display:flex; gap:1rem; flex-wrap:wrap; }
+  .footer-links a { font-size:0.75rem; color:var(--text-light); text-decoration:none; }
+  .footer-links a:hover { color:var(--blue); }
+
+  @media (min-width:768px) {
+    nav { padding:1rem 5vw; }
+    .page-header { padding:9rem 5vw 3.5rem; }
+    .content { padding:4rem 5vw; }
+    .detail-grid { display:grid; grid-template-columns:1fr 1fr; }
+    .detail-card.featured { grid-column:1/-1; }
+    footer { flex-direction:row; justify-content:space-between; align-items:center; padding:1.75rem 5vw; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index-v10.html" class="logo">Receptionniste<span>.ch</span></a>
+  <div class="nav-links">
+    <a href="index-v10.html" class="nav-link">Accueil</a>
+    <a href="demos.html" class="nav-link">D&#233;mos</a>
+    <a href="comparaison.html" class="nav-link active">Comparaison</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#contact" class="nav-cta">Essai gratuit</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index-v10.html" class="drawer-link">Accueil</a>
+  <a href="demos.html" class="drawer-link">D&#233;mos secteurs</a>
+  <a href="comparaison.html" class="drawer-link active">Comparaison</a>
+  <a href="#contact" class="drawer-link" onclick="toggleMenu()">Essai gratuit</a>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">Comparaison</p>
+  <h1>Ariane vs les autres solutions</h1>
+  <p class="page-sub">R&#233;pondeur automatique, secr&#233;taire, t&#233;l&#233;phone de piquet&#160;: voici une comparaison honn&#234;te pour vous aider &#224; choisir.</p>
+</div>
+
+<div class="content">
+
+  <!-- TABLE PRINCIPALE -->
+  <h2 class="section-title" style="margin-bottom:1rem;">Vue d&#8217;ensemble</h2>
+  <div class="table-wrap">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="col-win"><span class="w-badge">⭐ Recommand&#233;</span><br><span style="font-size:14px;font-weight:700;color:#15803d;">Ariane</span></th>
+          <th>R&#233;pondeur</th>
+          <th>Secr&#233;taire</th>
+          <th>T&#233;l. piquet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>R&#233;pond 24h/24, 7j/7</td><td class="col-win"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cp">±</span></td></tr>
+        <tr><td>Comprend la demande</td><td class="col-win"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Capture nom + num&#233;ro + besoin</td><td class="col-win"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cp">±</span></td><td><span class="cp">±</span></td></tr>
+        <tr><td>WhatsApp au patron &lt;2 min</td><td class="col-win"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Z&#233;ro appel oubli&#233;</td><td class="col-win"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cp">±</span></td><td><span class="cp">±</span></td></tr>
+        <tr><td>Disponible soir et week-end</td><td class="col-win"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cp">±</span></td></tr>
+        <tr><td>Aucune gestion RH</td><td class="col-win"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Conna&#238;t vos services</td><td class="col-win"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cp">±</span></td><td><span class="cp">±</span></td></tr>
+        <tr><td>Setup en moins de 48h</td><td class="col-win"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr>
+          <td style="font-weight:600;">Co&#251;t mensuel</td>
+          <td class="col-win" style="color:#15803d;font-weight:700;font-size:15px;">CHF 299</td>
+          <td style="font-weight:600;font-size:13px;">CHF 20–50</td>
+          <td style="font-weight:600;font-size:13px;">CHF 4–6k</td>
+          <td style="font-weight:600;font-size:13px;">CHF 500–2k</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="table-note">± = d&#233;pend de la personne &#183; ✓ = toujours &#183; ✗ = jamais</p>
+
+  <!-- DETAIL PAR SOLUTION -->
+  <h2 class="section-title">Analyse d&#233;taill&#233;e</h2>
+  <p class="section-sub">Chaque solution a ses points forts. Voici un regard honn&#234;te.</p>
+
+  <div class="detail-grid">
+
+    <!-- ARIANE -->
+    <div class="detail-card featured">
+      <div class="detail-header">
+        <div class="detail-icon">🤖</div>
+        <div>
+          <div class="detail-name">Ariane — Receptionniste.ch</div>
+          <div class="detail-price">CHF 99 premier mois &#183; CHF 299/mois ensuite</div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <ul class="pros"><h4>Points forts</h4>
+          <li>Disponible 24h/24, jamais malade</li>
+          <li>WhatsApp instantan&#233; avec tout le contexte</li>
+          <li>Z&#233;ro appel perdu, z&#233;ro oubli</li>
+          <li>Configur&#233;e pour votre m&#233;tier sp&#233;cifique</li>
+          <li>Pas de gestion, pas de RH</li>
+          <li>Setup en 48h, CHF 99 pour tester</li>
+        </ul>
+        <ul class="cons"><h4>Limites</h4>
+          <li>Ne peut pas prendre de d&#233;cision &#224; votre place</li>
+          <li>Conversations complexes peuvent n&#233;cessiter un rappel</li>
+          <li>Pas de pr&#233;sence physique au guichet</li>
+        </ul>
+      </div>
+      <p class="detail-verdict">Id&#233;al pour les artisans et PME ind&#233;pendants qui ratent des appels quand ils sont sur chantier, avec un client, ou ferm&#233;s.</p>
+    </div>
+
+    <!-- RÉPONDEUR -->
+    <div class="detail-card">
+      <div class="detail-header">
+        <div class="detail-icon">📼</div>
+        <div>
+          <div class="detail-name">R&#233;pondeur automatique</div>
+          <div class="detail-price">CHF 0–50/mois</div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <ul class="pros"><h4>Points forts</h4>
+          <li>Tr&#232;s peu cher</li>
+          <li>Simple &#224; mettre en place</li>
+          <li>Disponible 24h/24</li>
+        </ul>
+        <ul class="cons"><h4>Limites</h4>
+          <li>80% raccrochent sans message</li>
+          <li>Ne comprend pas la demande</li>
+          <li>Pas de notification imm&#233;diate</li>
+          <li>Vous devez tout rappeler vous-m&#234;me</li>
+          <li>Ne capte pas l&#8217;urgence</li>
+        </ul>
+      </div>
+      <p class="detail-verdict">Acceptable si vous &#234;tes toujours disponible pour rappeler. Probl&#233;matique si vous &#234;tes souvent en intervention — 80&#160;% de vos appelants raccrochent sans laisser de message.</p>
+    </div>
+
+    <!-- SECRÉTAIRE -->
+    <div class="detail-card">
+      <div class="detail-header">
+        <div class="detail-icon">👤</div>
+        <div>
+          <div class="detail-name">Secr&#233;taire / r&#233;ceptioniste</div>
+          <div class="detail-price">CHF 4&#8217;000–6&#8217;000/mois</div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <ul class="pros"><h4>Points forts</h4>
+          <li>Comprend les demandes complexes</li>
+          <li>Peut prendre des d&#233;cisions</li>
+          <li>Pr&#233;sence physique possible</li>
+          <li>Relation client plus chaleureuse</li>
+        </ul>
+        <ul class="cons"><h4>Limites</h4>
+          <li>CHF 4–6k/mois minimum</li>
+          <li>Vacances, maladie, d&#233;missions</li>
+          <li>Absente le soir et le week-end</li>
+          <li>Formation longue sur votre m&#233;tier</li>
+          <li>Charges sociales, gestion RH</li>
+        </ul>
+      </div>
+      <p class="detail-verdict">Excellent choix si votre volume justifie le co&#251;t. Pour la plupart des artisans ind&#233;pendants, le retour sur investissement n&#8217;est pas l&#224;.</p>
+    </div>
+
+    <!-- PIQUET -->
+    <div class="detail-card">
+      <div class="detail-header">
+        <div class="detail-icon">📱</div>
+        <div>
+          <div class="detail-name">T&#233;l&#233;phone de piquet</div>
+          <div class="detail-price">CHF 500–2&#8217;000/mois</div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <ul class="pros"><h4>Points forts</h4>
+          <li>Une vraie personne r&#233;pond</li>
+          <li>Peut g&#233;rer les urgences</li>
+          <li>Conna&#238;t le secteur</li>
+        </ul>
+        <ul class="cons"><h4>Limites</h4>
+          <li>Co&#251;teux pour petites structures</li>
+          <li>Disponibilit&#233; variable selon services</li>
+          <li>Pas de WhatsApp automatique</li>
+          <li>Vous d&#233;pend d&#8217;un tiers externe</li>
+        </ul>
+      </div>
+      <p class="detail-verdict">Pertinent pour les urgences m&#233;dicales ou les interventions critiques. Surdimensionn&#233; pour un garage ou un &#233;lectricien qui veut juste ne plus rater des demandes de devis.</p>
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+  <h2 class="section-title">Questions fr&#233;quentes</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Mon r&#233;pondeur marche bien, pourquoi changer&#160;?</div>
+      <div class="faq-a">Parce que 80&#160;% de vos appelants raccrochent sans laisser de message quand ils tombent sur un r&#233;pondeur (source&#160;: Forbes / BIA-Kelsey). Ils n&#8217;attendent pas — ils appellent le concurrent. Ariane d&#233;croche, capte la demande, et vous envoie un WhatsApp dans les 2 minutes. Vous ne le voyez pas, mais vous perdez probablement plusieurs milliers de francs par mois.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Est-ce qu&#8217;Ariane sonne humaine&#160;?</div>
+      <div class="faq-a">Ariane utilise une voix synth&#233;tique de haute qualit&#233; en fran&#231;ais suisse (Azure fr-CH-ArianeNeural). Elle ne pr&#233;tend pas &#234;tre humaine — elle se pr&#233;sente comme l&#8217;assistante t&#233;l&#233;phonique de votre entreprise. La plupart des appelants ne font pas la diff&#233;rence dans la pratique. Testez-la sur <a href="demos.html" style="color:var(--blue);">nos d&#233;mos</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Que se passe-t-il si le client pose une question sp&#233;cifique&#160;?</div>
+      <div class="faq-a">Ariane est configur&#233;e avec les informations de votre entreprise (horaires, services, zone d&#8217;intervention, tarifs si vous souhaitez les partager). Pour les questions auxquelles elle ne peut pas r&#233;pondre, elle note la question et vous la transmet avec le reste des informations du client.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Est-ce que je dois changer mon num&#233;ro de t&#233;l&#233;phone&#160;?</div>
+      <div class="faq-a">Non. Vous gardez votre num&#233;ro actuel. Vous configurez un renvoi d&#8217;appel sur votre op&#233;rateur (Free, Salt, Sunrise, etc.) vers le num&#233;ro suisse d&#233;di&#233; d&#8217;Ariane. &#199;a se fait en 5 minutes dans les param&#232;tres de votre t&#233;l&#233;phone.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Combien de temps pour d&#233;marrer&#160;?</div>
+      <div class="faq-a">Moins de 48 heures. Antoine configure l&#8217;assistant avec les informations de votre entreprise, vous recevez votre num&#233;ro suisse d&#233;di&#233;, et vous activez le renvoi d&#8217;appel. C&#8217;est tout.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Et si je ne suis pas satisfait apr&#232;s le premier mois&#160;?</div>
+      <div class="faq-a">Vous arrêtez, sans aucune justification &#224; donner. Le pilote &#224; CHF&#160;99 est sans engagement — si Ariane ne vous a pas fait gagner de temps ou de clients, vous ne continuez pas. Simple.</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bottom-cta" id="contact">
+    <h2>Pr&#234;t &#224; tester&#160;?</h2>
+    <p>Essai 1 mois &#224; CHF 99, sans engagement.<br>Votre assistant configur&#233; en moins de 48h.</p>
+    <a href="https://wa.me/41789151573?text=Bonjour%20Antoine%2C%20je%20veux%20d%C3%A9marrer%20l%27essai%20Ariane." class="btn-wa" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Nous contacter
+    </a>
+    <a href="demos.html" class="btn-demo">Tester la d&#233;mo d&#8217;abord →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <a href="index-v10.html" class="footer-logo">Receptionniste.ch</a>
+    <div class="footer-links" style="margin-top:0.5rem;">
+      <a href="index-v10.html">Accueil</a>
+      <a href="demos.html">D&#233;mos</a>
+    </div>
+    <div class="footer-lang">
+      <span style="font-size:0.72rem;color:var(--text-light);line-height:2;">Langue&#160;:</span>
+      <button class="footer-lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="footer-lang-btn" onclick="setLang('de')">DE</button>
+      <button class="footer-lang-btn" onclick="setLang('it')">IT</button>
+      <button class="footer-lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <div class="footer-copy">&#169; 2026 &#183; Valais, Suisse &#183; Antoine Pury</div>
+</footer>
+
+<script>
+  function toggleMenu() { const h=document.getElementById('hamburger'),d=document.getElementById('drawer'); h.classList.toggle('open'); d.classList.toggle('open'); }
+  document.addEventListener('click',e=>{ const d=document.getElementById('drawer'),h=document.getElementById('hamburger'); if(d&&d.classList.contains('open')&&!d.contains(e.target)&&!h.contains(e.target)){d.classList.remove('open');h.classList.remove('open');} });
+  function setLang(lang, save=true) {
+    if (save) localStorage.setItem('rc_lang', lang);
+    document.querySelectorAll('.footer-lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+  }
+  (function() {
+    const saved = localStorage.getItem('rc_lang');
+    if (saved) { setLang(saved, false); return; }
+    const sys = (navigator.language || 'fr').toLowerCase().split('-')[0];
+    setLang(['fr','de','it','en'].includes(sys) ? sys : 'fr', false);
+  })();
+  window.addEventListener('scroll', () => { document.querySelector('nav').style.boxShadow = window.scrollY > 10 ? '0 1px 16px rgba(0,0,0,0.07)' : 'none'; });
+</script>
+</body>
+</html>

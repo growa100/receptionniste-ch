@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Démos en direct — Testez Ariane sur votre secteur | Receptionniste.ch</title>
+<meta name="description" content="Testez gratuitement Ariane sur votre métier : garage, électricien, sanitaire. Appelez un numéro suisse et entendez comment elle répondrait à vos clients.">
+<link rel="canonical" href="https://www.receptionniste.ch/demos.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.receptionniste.ch/demos.html">
+<meta property="og:title" content="Démos Ariane — Testez sur votre secteur">
+<meta property="og:description" content="3 démos en direct : garage Valais, électricien Vaud, sanitaire Genève. Appelez et observez.">
+<meta property="og:locale" content="fr_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0d1b2a; --blue:#16a34a; --blue-light:#dcfce7; --border:#e4e8ed; --text:#0d1b2a; --text-mid:#4a5568; --text-light:#8596a8; --bg:#ffffff; --bg-alt:#f7f8fa; --card-bg:#ffffff; --nav-bg:rgba(255,255,255,0.94); }
+  @media (prefers-color-scheme: dark) { :root { --navy:#e8edf2; --blue:#4ade80; --blue-light:rgba(74,222,128,0.15); --border:#30363d; --text:#e8edf2; --text-mid:#8b949e; --text-light:#6e7681; --bg:#0d1117; --bg-alt:#161b22; --card-bg:#1c2128; --nav-bg:rgba(13,17,23,0.94); } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Sora',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+  /* NAV — shared */
+  nav { position:fixed; top:0; width:100%; z-index:100; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 1.25rem; height:60px; display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-family:'Fraunces',serif; font-size:1.3rem; color:var(--navy); text-decoration:none; flex-shrink:0; }
+  .logo span { color:var(--blue); }
+  .nav-links { display:none; align-items:center; gap:0.25rem; position:absolute; left:50%; transform:translateX(-50%); }
+  .nav-link { font-size:0.8rem; color:var(--text-light); text-decoration:none; padding:0.35rem 0.75rem; border-radius:6px; transition:all 0.15s; white-space:nowrap; }
+  .nav-link:hover, .nav-link.active { color:var(--blue); background:var(--blue-light); }
+  .nav-right { display:flex; align-items:center; gap:0.6rem; }
+  .nav-cta { background:var(--navy); color:white; padding:0.45rem 0.9rem; border-radius:6px; font-size:0.78rem; font-weight:500; text-decoration:none; transition:background 0.15s; white-space:nowrap; }
+  .nav-cta:hover { background:#16a34a; }
+  .nav-hamburger { display:flex; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; margin-right:0.3rem; }
+  .nav-hamburger span { display:block; width:20px; height:2px; background:var(--text); border-radius:2px; transition:all 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity:0; }
+  .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .nav-drawer { position:fixed; top:60px; left:0; right:0; z-index:99; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:1rem 1.25rem 1.25rem; display:flex; flex-direction:column; gap:0.25rem; transform:translateY(-110%); opacity:0; transition:transform 0.25s ease,opacity 0.2s ease; pointer-events:none; }
+  .nav-drawer.open { transform:translateY(0); opacity:1; pointer-events:auto; }
+  .drawer-link { font-size:1rem; color:var(--text); text-decoration:none; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .drawer-link:last-child { border-bottom:none; }
+  .drawer-link:hover, .drawer-link.active { color:var(--blue); }
+  .drawer-link::after { content:'→'; opacity:0.3; font-size:0.85rem; }
+  /* Footer lang */
+  .footer-lang { display:flex; gap:0.35rem; margin-top:0.75rem; }
+  .footer-lang-btn { background:none; border:1px solid var(--border); color:var(--text-light); padding:0.25rem 0.6rem; border-radius:5px; cursor:pointer; font-family:'Sora',sans-serif; font-size:0.72rem; font-weight:500; transition:all 0.15s; }
+  .footer-lang-btn:hover, .footer-lang-btn.active { border-color:var(--blue); color:var(--blue); background:var(--blue-light); }
+  @media (prefers-color-scheme:dark) { .nav-cta { background:#16a34a; } .nav-cta:hover { background:#15803d; } }
+  @media (min-width:680px) { nav { padding:0 2.5rem; } .nav-links { display:flex; } .nav-hamburger { display:none; } .nav-drawer { display:none !important; } .footer-lang { display:none; } }
+  @media (min-width:1024px) { nav { padding:0 5vw; } }
+
+  .page-header { padding:6.5rem 1.25rem 2.5rem; text-align:center; background:var(--bg-alt); }
+  .eyebrow { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#16a34a; margin-bottom:0.7rem; }
+  h1 { font-family:'Fraunces',serif; font-size:clamp(2rem,7vw,3rem); font-weight:700; line-height:1.1; letter-spacing:-0.02em; color:var(--navy); margin-bottom:1rem; }
+  h1 em { font-style:italic; color:var(--blue); }
+  .page-sub { font-size:1rem; color:var(--text-mid); line-height:1.7; font-weight:300; max-width:52ch; margin:0 auto; }
+
+  .demos-grid { display:flex; flex-direction:column; gap:1.5rem; padding:3rem 1.25rem; max-width:700px; margin:0 auto; }
+
+  .demo-card { background:var(--card-bg); border:1px solid var(--border); border-radius:20px; padding:2rem; transition:all 0.2s; }
+  .demo-card:hover { border-color:#16a34a; box-shadow:0 4px 24px rgba(22,163,74,0.1); }
+  .demo-card-header { display:flex; align-items:center; gap:1rem; margin-bottom:1.25rem; }
+  .demo-icon { width:52px; height:52px; background:#16a34a; border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.5rem; }
+  .demo-sector-name { font-family:'Fraunces',serif; font-size:1.4rem; color:var(--navy); font-weight:700; }
+  .demo-sector-sub { font-size:0.8rem; color:var(--text-light); margin-top:0.1rem; }
+
+  .demo-scenario { background:var(--bg-alt); border-radius:12px; padding:1rem 1.25rem; margin-bottom:1.25rem; }
+  .demo-scenario-label { font-size:0.68rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--blue); margin-bottom:0.4rem; }
+  .demo-scenario-text { font-size:0.9rem; color:var(--text-mid); line-height:1.6; font-style:italic; }
+
+  .demo-instructions { margin-bottom:1.5rem; }
+  .demo-instruction-item { display:flex; gap:0.75rem; align-items:flex-start; padding:0.5rem 0; border-bottom:1px solid var(--border); font-size:0.85rem; color:var(--text-mid); }
+  .demo-instruction-item:last-child { border-bottom:none; }
+  .instr-num { font-family:'Fraunces',serif; font-size:1rem; color:#16a34a; font-weight:700; flex-shrink:0; width:1.2rem; }
+
+  .demo-call-btn { display:flex; align-items:center; justify-content:space-between; background:#16a34a; color:white; border-radius:14px; padding:1rem 1.25rem; text-decoration:none; transition:background 0.15s; }
+  .demo-call-btn:hover { background:#15803d; }
+  .demo-call-left { display:flex; align-items:center; gap:0.9rem; }
+  .call-icon { width:38px; height:38px; background:rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; animation:pulse-white 2s infinite; }
+  @keyframes pulse-white { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0.3)}50%{box-shadow:0 0 0 8px rgba(255,255,255,0)} }
+  .call-icon svg { width:16px; height:16px; fill:white; }
+  .call-number { font-family:'Fraunces',serif; font-size:1.3rem; letter-spacing:-0.01em; }
+  .call-label { font-size:0.72rem; opacity:0.8; }
+  .call-arrow { font-size:1.2rem; opacity:0.7; }
+
+  .demo-note { font-size:0.75rem; color:var(--text-light); text-align:center; margin-top:0.75rem; line-height:1.5; }
+
+  .bottom-cta { background:#0d1b2a; padding:3rem 1.25rem; text-align:center; }
+  .bottom-cta h2 { font-family:'Fraunces',serif; font-size:clamp(1.5rem,5vw,2rem); color:white; margin-bottom:0.75rem; }
+  .bottom-cta p { color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:1.5rem; line-height:1.6; }
+  .btn-wa { display:inline-flex; align-items:center; gap:0.5rem; background:#16a34a; color:white; padding:0.9rem 2rem; border-radius:12px; font-family:'Sora',sans-serif; font-weight:500; font-size:0.95rem; text-decoration:none; transition:background 0.15s; }
+  .btn-wa:hover { background:#15803d; }
+
+  footer { padding:1.5rem 1.25rem; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:0.4rem; background:var(--bg); }
+  .footer-logo { font-family:'Fraunces',serif; font-size:0.95rem; color:var(--navy); }
+  .footer-copy { font-size:0.75rem; color:var(--text-light); }
+  .footer-links { display:flex; gap:1rem; flex-wrap:wrap; }
+  .footer-links a { font-size:0.75rem; color:var(--text-light); text-decoration:none; }
+  .footer-links a:hover { color:var(--blue); }
+
+  .fade-up { opacity:0; transform:translateY(20px); transition:opacity 0.55s ease, transform 0.55s ease; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
+
+  @media (min-width:768px) {
+    nav { padding:1rem 5vw; }
+    .page-header { padding:9rem 5vw 3.5rem; }
+    .demos-grid { padding:4rem 5vw; max-width:900px; }
+    footer { flex-direction:row; justify-content:space-between; align-items:center; padding:1.75rem 5vw; }
+    .bottom-cta { padding:5rem 5vw; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index-v10.html" class="logo">Receptionniste<span>.ch</span></a>
+  <div class="nav-links">
+    <a href="index-v10.html" class="nav-link">Accueil</a>
+    <a href="demos.html" class="nav-link active">D&#233;mos</a>
+    <a href="comparaison.html" class="nav-link">Comparaison</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#contact" class="nav-cta">Essai gratuit</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index-v10.html" class="drawer-link">Accueil</a>
+  <a href="demos.html" class="drawer-link active">D&#233;mos secteurs</a>
+  <a href="comparaison.html" class="drawer-link">Comparaison</a>
+  <a href="#contact" class="drawer-link" onclick="toggleMenu()">Essai gratuit</a>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">Démos en direct</p>
+  <h1>Testez sur <em>votre secteur.</em></h1>
+  <p class="page-sub">Trois assistants configurés pour trois m&#233;tiers diff&#233;rents. Appelez le num&#233;ro de votre secteur, parlez comme un vrai client, et observez.</p>
+</div>
+
+<div class="demos-grid">
+
+  <!-- GARAGE -->
+  <div class="demo-card fade-up">
+    <div class="demo-card-header">
+      <div class="demo-icon">🚗</div>
+      <div>
+        <div class="demo-sector-name">Garage</div>
+        <div class="demo-sector-sub">R&#233;paration automobile &#183; D&#233;pannage &#183; Valais</div>
+      </div>
+    </div>
+    <div class="demo-scenario">
+      <div class="demo-scenario-label">Sc&#233;nario sugg&#233;r&#233;</div>
+      <div class="demo-scenario-text">&#171;&#160;Bonjour, ma voiture fait un bruit &#233;trange au freinage depuis ce matin. C&#8217;est urgent, je dois partir en voyage demain. Vous pouvez me recevoir&#160;?&#160;&#187;</div>
+    </div>
+    <div class="demo-instructions">
+      <div class="demo-instruction-item"><span class="instr-num">1</span><span>Appelez le num&#233;ro ci-dessous</span></div>
+      <div class="demo-instruction-item"><span class="instr-num">2</span><span>Parlez naturellement, comme &#224; une vraie r&#233;ceptionniste</span></div>
+      <div class="demo-instruction-item"><span class="instr-num">3</span><span>Notez&#160;: elle prend vos coordonn&#233;es sans que vous ayez &#224; les r&#233;p&#233;ter</span></div>
+    </div>
+    <a href="tel:+41275391784" class="demo-call-btn">
+      <div class="demo-call-left">
+        <div class="call-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+        <div><div class="call-label">Appeler la d&#233;mo</div><div class="call-number">027 539 17 84</div></div>
+      </div>
+      <span class="call-arrow">→</span>
+    </a>
+    <p class="demo-note">Num&#233;ro suisse &#183; Appel normal &#183; La r&#233;ceptionniste r&#233;pond en fran&#231;ais suisse</p>
+  </div>
+
+  <!-- ÉLECTRICIEN -->
+  <div class="demo-card fade-up">
+    <div class="demo-card-header">
+      <div class="demo-icon">⚡</div>
+      <div>
+        <div class="demo-sector-name">Électricien</div>
+        <div class="demo-sector-sub">Installation &#183; D&#233;pannage &#183; Vaud</div>
+      </div>
+    </div>
+    <div class="demo-scenario">
+      <div class="demo-scenario-label">Sc&#233;nario sugg&#233;r&#233;</div>
+      <div class="demo-scenario-text">&#171;&#160;Mon tableau &#233;lectrique disjoncte sans arr&#234;t depuis hier soir. J&#8217;ai d&#233;j&#224; eu une coupure compl&#232;te. C&#8217;est dans un appartement avec de jeunes enfants.&#160;&#187;</div>
+    </div>
+    <div class="demo-instructions">
+      <div class="demo-instruction-item"><span class="instr-num">1</span><span>Appelez le num&#233;ro ci-dessous</span></div>
+      <div class="demo-instruction-item"><span class="instr-num">2</span><span>Mentionnez l&#8217;urgence — observez comment elle l&#8217;&#233;value</span></div>
+      <div class="demo-instruction-item"><span class="instr-num">3</span><span>Elle vous demande une heure de rappel pr&#233;f&#233;r&#233;e</span></div>
+    </div>
+    <a href="tel:+41215394007" class="demo-call-btn">
+      <div class="demo-call-left">
+        <div class="call-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+        <div><div class="call-label">Appeler la d&#233;mo</div><div class="call-number">021 539 40 07</div></div>
+      </div>
+      <span class="call-arrow">→</span>
+    </a>
+    <p class="demo-note">Num&#233;ro suisse &#183; Appel normal &#183; La r&#233;ceptionniste r&#233;pond en fran&#231;ais suisse</p>
+  </div>
+
+  <!-- SANITAIRE -->
+  <div class="demo-card fade-up">
+    <div class="demo-card-header">
+      <div class="demo-icon">🔧</div>
+      <div>
+        <div class="demo-sector-name">Sanitaire</div>
+        <div class="demo-sector-sub">Plomberie &#183; Chauffage &#183; Gen&#232;ve</div>
+      </div>
+    </div>
+    <div class="demo-scenario">
+      <div class="demo-scenario-label">Sc&#233;nario sugg&#233;r&#233;</div>
+      <div class="demo-scenario-text">&#171;&#160;J&#8217;ai une fuite sous l&#8217;&#233;vier de la cuisine depuis ce matin. Le sol est d&#233;j&#224; mouill&#233;. J&#8217;ai coup&#233; l&#8217;eau mais j&#8217;en ai besoin pour ce soir — j&#8217;ai des invit&#233;s.&#160;&#187;</div>
+    </div>
+    <div class="demo-instructions">
+      <div class="demo-instruction-item"><span class="instr-num">1</span><span>Appelez le num&#233;ro ci-dessous</span></div>
+      <div class="demo-instruction-item"><span class="instr-num">2</span><span>D&#233;crivez le probl&#232;me — elle pose les bonnes questions</span></div>
+      <div class="demo-instruction-item"><span class="instr-num">3</span><span>Notez la qualit&#233; du fran&#231;ais et la fluidit&#233; de la conversation</span></div>
+    </div>
+    <a href="tel:+41225391991" class="demo-call-btn">
+      <div class="demo-call-left">
+        <div class="call-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+        <div><div class="call-label">Appeler la d&#233;mo</div><div class="call-number">022 539 19 91</div></div>
+      </div>
+      <span class="call-arrow">→</span>
+    </a>
+    <p class="demo-note">Num&#233;ro suisse &#183; Appel normal &#183; La r&#233;ceptionniste r&#233;pond en fran&#231;ais suisse</p>
+  </div>
+
+</div>
+
+<div class="bottom-cta" id="contact">
+  <h2>Conv&#233;aincu&#160;? On configure le v&#244;tre.</h2>
+  <p>Votre assistant configur&#233; pour votre entreprise en moins de 48h.<br>Essai 1 mois &#224; CHF 99, sans engagement.</p>
+  <a href="https://wa.me/41789151573?text=Bonjour%20Antoine%2C%20j%27ai%20test%C3%A9%20la%20d%C3%A9mo%20et%20je%20veux%20configurer%20mon%20assistant." class="btn-wa" target="_blank">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Nous contacter par WhatsApp
+  </a>
+</div>
+
+<footer>
+<div style="padding:1.5rem 1.25rem; border-top:1px solid var(--border); background:var(--bg);">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
+    <div>
+      <a href="index-v10.html" class="footer-logo" style="font-family:'Fraunces',serif;font-size:0.95rem;color:var(--navy);text-decoration:none;">Receptionniste.ch</a>
+      <div class="footer-links" style="margin-top:0.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="index-v10.html" style="font-size:0.75rem;color:var(--text-light);text-decoration:none;">Accueil</a>
+        <a href="comparaison.html" style="font-size:0.75rem;color:var(--text-light);text-decoration:none;">Comparaison</a>
+      </div>
+      <div class="footer-lang">
+        <span style="font-size:0.72rem;color:var(--text-light);line-height:2;">Langue&#160;:</span>
+        <button class="footer-lang-btn active" onclick="setLang('fr')">FR</button>
+        <button class="footer-lang-btn" onclick="setLang('de')">DE</button>
+        <button class="footer-lang-btn" onclick="setLang('it')">IT</button>
+        <button class="footer-lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+    <div style="font-size:0.75rem;color:var(--text-light);">&#169; 2026 &#183; Valais, Suisse &#183; Antoine Pury</div>
+  </div>
+</div>
+</footer>
+
+<script>
+  function toggleMenu() { const h=document.getElementById('hamburger'),d=document.getElementById('drawer'); h.classList.toggle('open'); d.classList.toggle('open'); }
+  document.addEventListener('click',e=>{ const d=document.getElementById('drawer'),h=document.getElementById('hamburger'); if(d&&d.classList.contains('open')&&!d.contains(e.target)&&!h.contains(e.target)){d.classList.remove('open');h.classList.remove('open');} });
+  function setLang(lang, save=true) {
+    if (save) localStorage.setItem('rc_lang', lang);
+    document.querySelectorAll('.footer-lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+  }
+  (function() {
+    const saved = localStorage.getItem('rc_lang');
+    if (saved) { setLang(saved, false); return; }
+    const sys = (navigator.language || 'fr').toLowerCase().split('-')[0];
+    setLang(['fr','de','it','en'].includes(sys) ? sys : 'fr', false);
+  })();
+  const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i*120); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  window.addEventListener('scroll', () => { document.querySelector('nav').style.boxShadow = window.scrollY > 10 ? '0 1px 16px rgba(0,0,0,0.07)' : 'none'; });
+</script>
+</body>
+</html>
